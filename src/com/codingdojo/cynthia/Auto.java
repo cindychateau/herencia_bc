@@ -1,6 +1,6 @@
 package com.codingdojo.cynthia;
 
-public class Auto extends Vehiculo {
+public class Auto extends Vehiculo implements ManejarVehiculo {
 	
 	private String placas;
 	
@@ -23,6 +23,18 @@ public class Auto extends Vehiculo {
 		//System.out.println("Año: "+this.getAnio()+" Marca:"+this.marca+" Modelo:"+this.modelo+" Placas:"+this.placas);
 		super.imprimir();
 		System.out.println("Placas:"+this.placas);
+	}
+	
+	public void acelerar() {
+		System.out.println("Voy a Acelerar");
+		velocidad += aumento;
+		System.out.println("Mi velocidad es de:"+velocidad);
+	}
+	
+	public void desacelerar() {
+		System.out.println("Voy a bajar mi velocidad");
+		velocidad -= aumento;
+		System.out.println("Mi velocidad es de:"+velocidad);
 	}
 	
 }
